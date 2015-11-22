@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* font face */
+
+a{
+    cursor: pointer;
+}
+/*  font 
+-----------------------------------------------------------------------------*/
+.txt14 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.txt12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.txt10 {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.txt_b { font-weight: bold; }
+
+/*  align
+-----------------------------------------------------------------------------*/
+.align_r { text-align: right; }
+.align_c { text-align: center; }
+.align_l { text-align: left; }
+.valign_m { vertical-align: middle; }
+
+/*  float 
+-----------------------------------------------------------------------------*/
+.fl { float: left; }
+.fr { float: right; }
+.cb { clear: both; }
+
+.clearfix {
+	overflow: hidden;
+	clear:both;
+	/*display: inline-block;*/
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/*\*/
+* html .clearfix {
+	height: 1em;
+	overflow: visible;
+}
+
+.show-when-printing, .print, .print *
+    {
+        display: none !important;
+    }
+@media print
+{    
+    .hide-when-printing, .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    .show-when-printing, .print, .print *
+    {
+        display: block !important;
+    }
+    a[href]:after {
+      content: none !important;
+    }
+}
+
+.margin_center{
+  margin: auto auto;
+  float: none;
+}
+
+/*loading*/
+#loading-view{
+  background-color: rgba(242,242,242,0.9)!important;
+  z-index: 1060;
+  bottom: 0;
+}
+
+@-moz-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-o-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+    100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-moz-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+
+@-o-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+@-webkit-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+@keyframes loading-text-opacity {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
+}
+
+.loading-container,
+.loading {
+    height: 106px;
+    position: relative;
+    width: 106px;
+    border-radius: 100%;
+}
+
+.loading-container { margin: 40px auto; }
+
+.loading {
+    /*border: 2px solid transparent;
+    border-color: transparent #fff transparent #FFF;*/
+  background-image: url(../../images/loadingImage.png);
+    -moz-animation: rotate-loading 2.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: rotate-loading 2.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: rotate-loading 2.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: rotate-loading 2.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading {
+    border-color: transparent #E45635 transparent #E45635;
+}
+.loading-container:hover .loading,
+.loading-container .loading {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: #ffffff;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 106px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100px;
+}
+.fileinput-button
+        {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            overflow: visible;
+            /*background-color: red;*/
+            overflow: hidden;
+        }
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.fadein,
+.fadeout {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.fadein.ng-hide-remove,
+.fadeout.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  display: block !important;
+}
+
+.fadeout.ng-hide-add,
+.fadein.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  display: block !important;
+}

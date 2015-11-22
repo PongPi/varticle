@@ -1,0 +1,33 @@
+{{=P(A(T('Xem tiếp...'),_href="#",_target="_blank"),_class="readmore")}}@charset "UTF-8";
+
+/*  Layout
+-----------------------------------------------------------------------------*/
+/* Body */
+body {
+	font: 12px "arial";
+	background-image: url(../../images/bg.jpg);
+	/*line-height: 120%;*/
+	color: #333;
+}
+
+#wrapper{
+	/*width: 920px;
+	margin: 0px auto;*/
+}
+#header{
+	/*background: #FFFFFF;*/
+}
+#content{
+	padding-top: 60px;
+	background: #FFFFFF;
+}
+#navi_vnu20_vertical .list-group-item{
+	border-radius: 0px;
+	/*border-top-right-radius: 0px;*/
+}
+#navi_vnu20_vertical .list-group .list-group-item{
+	padding-left: 60px;
+}
+#navi_vnu20_vertical .list-group{
+	 margin-bottom: 0px; 
+}

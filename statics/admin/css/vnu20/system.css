@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/*  System common
+-----------------------------------------------------------------------------*/
+/* Form */
+span.error {
+  font-size: 10px;
+  font-weight: bold;
+  color: #bb2329;
+}
+
+input.error, textarea.error { background: #fee; }
+.w_s { width: 70px; }
+.w_m { width: 155px; }
+.w_l { width: 200px; }
+.w_ll { width: 275px; }
+
+/*  Contact
+-----------------------------------------------------------------------------*/
+/* Form */
+#form_base {
+  
+}
